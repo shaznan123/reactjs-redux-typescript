@@ -1,4 +1,4 @@
-import RoutesList from "./routes";
+import RoutesList from "./Routes";
 import { BrowserRouter } from "react-router-dom";
 const App = () => {
   return (
