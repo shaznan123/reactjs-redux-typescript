@@ -25,6 +25,36 @@ interface ITable {
   columns: IColumns[];
 }
 
+// DOCUMENTATION:
+//Pass Data and Columns from parent component to render table
+// const data = [
+//   {
+//     id: 1,
+//     prescriptionName: "Diabetes",
+//     doctorName: "Dr Shenelle Moses",
+//     datePrescribed: "08.10.2022",
+//     nextRefillDate: "08.20.2021",
+//   },
+// ];
+
+// const columns = [
+//   {
+//     name: TableColumnTitles.PRESCRIPTION_NAME,
+//     selector: (row: any) => row.prescriptionName,
+//     sortable: true,
+//   },
+//   {
+//     name: TableColumnTitles.NEXT_REFILL_DATE,
+//     selector: (row: any) => row.nextRefillDate,
+//     sortable: true,
+//   },
+//   {
+//     name: TableColumnTitles.ACTIONS,
+//     selector: (row: any) => row.actions,
+//     type: ["view", "edit", "delete", "star"],
+//   },
+// ];
+
 const Table: FC<ITable> = ({ data, columns }) => {
   const tempIconStyles = {
     marginRight: "0.5rem",

@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import Table from "../Component/Common/Table";
+import { TableColumnTitles } from "../Constants/constants";
 
 const data = [
   {
@@ -18,28 +19,27 @@ const data = [
 
 const columns = [
   {
-    name: "Prescription Name",
+    name: TableColumnTitles.PRESCRIPTION_NAME,
     selector: (row: any) => row.prescriptionName,
     sortable: true,
   },
   {
-    name: "Doctor Name",
+    name: TableColumnTitles.DOCTOR_NAME,
     selector: (row: any) => row.doctorName,
     sortable: true,
   },
   {
-    name: "Next Refill Date",
+    name: TableColumnTitles.NEXT_REFILL_DATE,
     selector: (row: any) => row.nextRefillDate,
     sortable: true,
-    // type: ["refill"],
   },
   {
-    name: "Date Prescribe",
+    name: TableColumnTitles.DATE_PRESCRIBE,
     selector: (row: any) => row.datePrescribed,
     sortable: true,
   },
   {
-    name: "Actions",
+    name: TableColumnTitles.ACTIONS,
     selector: (row: any) => row.actions,
     type: ["view", "edit", "delete", "star"],
   },
